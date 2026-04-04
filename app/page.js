@@ -51,7 +51,7 @@ export default function ComingSoon() {
           animation: 'fadeIn 1.5s ease'
         }}>
           <h1 style={{ fontSize: '60px', marginBottom: '15px', letterSpacing: '2px' }}>
-            🚧 Coming Soon
+            🚧 Coming Soons
           </h1>
           <p style={{ fontSize: '20px', lineHeight: '1.6', color: '#ddd', marginBottom: '20px' }}>
             We’re building something amazing for you.<br />
