@@ -1,36 +1,35 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-export const metadata: Metadata = {
-  title: "Kedar Developers", // Change your site title here
-  description: "Website under construction", // Your description
-  icons: {
-    icon: "/favicon.ico", // Path to your favicon in public folder
+export const metadata = {
+  title: "Kedar Developers – Premium Homes in Valsad, South Gujarat",
+  description:
+    "Kedar Developers builds premium residential projects in Parnera, Pardi, Valsad. 10+ years, 400+ happy families. Explore 2 BHK, 3 BHK apartments and luxury villas.",
+  keywords: "Kedar Developers, Valsad homes, Parnera real estate, Pardi apartments, South Gujarat property",
+  icons: { icon: "/favicon.ico" },
+  openGraph: {
+    title: "Kedar Developers – Premium Homes in Valsad",
+    description: "Building dream homes across South Gujarat since 2014.",
+    type: "website",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`} suppressHydrationWarning>
+      <body>{children}</body>
     </html>
   );
 }
